@@ -1,24 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="AppBackground">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFo-cX-iUv" userLabel="SceneStack">
+                                <rect key="frame" x="16" y="50" width="343" height="728"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Te-ok-e64" userLabel="Title">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="236"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your eggs?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o78-mP-M2X" userLabel="TitleText">
+                                                <rect key="frame" x="20.333333333333343" y="103.66666666666666" width="302.66666666666663" height="28.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="o78-mP-M2X" firstAttribute="centerY" secondItem="2Te-ok-e64" secondAttribute="centerY" id="1eN-jB-bQJ"/>
+                                            <constraint firstItem="o78-mP-M2X" firstAttribute="centerX" secondItem="2Te-ok-e64" secondAttribute="centerX" id="dWv-Jz-76u"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K7M-m3-ygd" userLabel="EggsStack">
+                                        <rect key="frame" x="0.0" y="246" width="343" height="236"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whz-a0-oiQ" userLabel="EggSoft">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="236"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo0-Ei-fHa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="236"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Soft">
+                                                            <backgroundConfiguration key="background" image="soft_egg" imageContentMode="scaleAspectFit"/>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="cookingLevelTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="406-hb-gEj"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Mo0-Ei-fHa" secondAttribute="bottom" id="D4A-uQ-ve2"/>
+                                                    <constraint firstItem="Mo0-Ei-fHa" firstAttribute="leading" secondItem="Whz-a0-oiQ" secondAttribute="leading" id="bRN-kt-VVh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Mo0-Ei-fHa" secondAttribute="trailing" id="hFD-qt-3DY"/>
+                                                    <constraint firstItem="Mo0-Ei-fHa" firstAttribute="top" secondItem="Whz-a0-oiQ" secondAttribute="top" id="tXx-uK-fd9"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71N-2g-G17" userLabel="EggMedium">
+                                                <rect key="frame" x="117" y="0.0" width="109" height="236"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2S-5s-JJ4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="236"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Medium">
+                                                            <backgroundConfiguration key="background" image="medium_egg" imageContentMode="scaleAspectFit"/>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="cookingLevelTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCQ-TE-T6j"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="F2S-5s-JJ4" secondAttribute="bottom" id="1yU-Sd-dw8"/>
+                                                    <constraint firstItem="F2S-5s-JJ4" firstAttribute="top" secondItem="71N-2g-G17" secondAttribute="top" id="E5k-ew-7Lw"/>
+                                                    <constraint firstItem="F2S-5s-JJ4" firstAttribute="leading" secondItem="71N-2g-G17" secondAttribute="leading" id="LEn-m5-6re"/>
+                                                    <constraint firstAttribute="trailing" secondItem="F2S-5s-JJ4" secondAttribute="trailing" id="vaW-Dh-2bA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVX-9o-gHz" userLabel="EggHard">
+                                                <rect key="frame" x="234" y="0.0" width="109" height="236"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPp-Wo-IBX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="236"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Hard">
+                                                            <backgroundConfiguration key="background" image="hard_egg" imageContentMode="scaleAspectFit"/>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="cookingLevelTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RTD-tc-TTF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="uPp-Wo-IBX" firstAttribute="leading" secondItem="NVX-9o-gHz" secondAttribute="leading" id="MHE-bf-h6Y"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uPp-Wo-IBX" secondAttribute="trailing" id="PfD-lz-Scl"/>
+                                                    <constraint firstAttribute="bottom" secondItem="uPp-Wo-IBX" secondAttribute="bottom" id="TEu-Xz-UCv"/>
+                                                    <constraint firstItem="uPp-Wo-IBX" firstAttribute="top" secondItem="NVX-9o-gHz" secondAttribute="top" id="eil-EC-aHl"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EfM-3s-EXh" userLabel="Progress">
+                                        <rect key="frame" x="0.0" y="492" width="343" height="236"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gcB-5V-Uvy" userLabel="ProgressBar">
+                                                <rect key="frame" x="10" y="110.66666666666663" width="323" height="15"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="kLU-3D-OgK"/>
+                                                </constraints>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="gcB-5V-Uvy" firstAttribute="centerX" secondItem="EfM-3s-EXh" secondAttribute="centerX" id="9PU-Sp-sb1"/>
+                                            <constraint firstAttribute="trailing" secondItem="gcB-5V-Uvy" secondAttribute="trailing" constant="10" id="Eee-qo-HJv"/>
+                                            <constraint firstItem="gcB-5V-Uvy" firstAttribute="centerY" secondItem="EfM-3s-EXh" secondAttribute="centerY" id="GZW-fg-evJ"/>
+                                            <constraint firstItem="gcB-5V-Uvy" firstAttribute="leading" secondItem="EfM-3s-EXh" secondAttribute="leading" constant="10" id="Mr3-Qx-YTY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EfM-3s-EXh" firstAttribute="centerX" secondItem="eFo-cX-iUv" secondAttribute="centerX" id="7n5-zn-L6M"/>
+                                    <constraint firstItem="K7M-m3-ygd" firstAttribute="trailing" secondItem="eFo-cX-iUv" secondAttribute="trailingMargin" id="8Ok-Bn-hbe"/>
+                                    <constraint firstItem="K7M-m3-ygd" firstAttribute="leading" secondItem="eFo-cX-iUv" secondAttribute="leadingMargin" id="N4R-EZ-b59"/>
+                                    <constraint firstItem="K7M-m3-ygd" firstAttribute="centerX" secondItem="eFo-cX-iUv" secondAttribute="centerX" id="X4m-ie-KhX"/>
+                                    <constraint firstItem="K7M-m3-ygd" firstAttribute="centerX" secondItem="eFo-cX-iUv" secondAttribute="centerX" id="ZRX-dB-3Hr"/>
+                                    <constraint firstItem="2Te-ok-e64" firstAttribute="centerX" secondItem="eFo-cX-iUv" secondAttribute="centerX" id="qeB-iJ-jcT"/>
+                                    <constraint firstItem="K7M-m3-ygd" firstAttribute="centerY" secondItem="eFo-cX-iUv" secondAttribute="centerY" id="rT0-jC-b8W"/>
+                                    <constraint firstItem="K7M-m3-ygd" firstAttribute="centerY" secondItem="eFo-cX-iUv" secondAttribute="centerY" id="wOd-0s-3Ef"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.71719010601239486" green="0.98613367766316951" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="eFo-cX-iUv" secondAttribute="trailing" id="04V-Xi-gYd"/>
+                            <constraint firstItem="eFo-cX-iUv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Ip-So-SgH"/>
+                            <constraint firstItem="eFo-cX-iUv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="90Z-Vd-rkE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eFo-cX-iUv" secondAttribute="bottom" id="oSq-p7-Sh6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="gcB-5V-Uvy" id="1kd-dx-Nz4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hard_egg" width="287.66665649414062" height="366.33334350585938"/>
+        <image name="medium_egg" width="288" height="363.33334350585938"/>
+        <image name="soft_egg" width="287" height="365.33334350585938"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

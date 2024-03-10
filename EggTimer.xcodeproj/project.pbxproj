@@ -13,6 +13,7 @@
 		79C6808C2B9D6012005C4FA9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 79C6808B2B9D6012005C4FA9 /* Base */; };
 		79C6808E2B9D6013005C4FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79C6808D2B9D6013005C4FA9 /* Assets.xcassets */; };
 		79C680912B9D6013005C4FA9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 79C680902B9D6013005C4FA9 /* Base */; };
+		79C6809C2B9D616E005C4FA9 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79C6809B2B9D616E005C4FA9 /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		79C6808D2B9D6013005C4FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79C680902B9D6013005C4FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79C680922B9D6013005C4FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79C6809B2B9D616E005C4FA9 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		79C680832B9D6012005C4FA9 /* EggTimer */ = {
 			isa = PBXGroup;
 			children = (
+				79C680982B9D6114005C4FA9 /* Sounds */,
 				79C680842B9D6012005C4FA9 /* AppDelegate.swift */,
 				79C680862B9D6012005C4FA9 /* SceneDelegate.swift */,
 				79C680882B9D6012005C4FA9 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				79C680922B9D6013005C4FA9 /* Info.plist */,
 			);
 			path = EggTimer;
+			sourceTree = "<group>";
+		};
+		79C680982B9D6114005C4FA9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				79C6809B2B9D616E005C4FA9 /* alarm_sound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +138,7 @@
 			files = (
 				79C6808E2B9D6013005C4FA9 /* Assets.xcassets in Resources */,
 				79C680912B9D6013005C4FA9 /* Base in Resources */,
+				79C6809C2B9D616E005C4FA9 /* alarm_sound.mp3 in Resources */,
 				79C6808C2B9D6012005C4FA9 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +312,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +320,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.geevin.EggTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +345,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +353,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.geevin.EggTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
